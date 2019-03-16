@@ -1,7 +1,7 @@
 ---
-title: "About this blog"
+title: "Project Overview: Social Media Habits and Attitudes of US Adult"
 description: |
-  Some additional details about the blog
+   Final project examining social media usage and beliefs of US adults.
 ---
 
 ```{r setup, include=FALSE}
