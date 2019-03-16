@@ -1,8 +1,8 @@
 [
   {
-    "path": "posts/welcome/",
-    "title": "Social Media Habits and Attitudes of US Adults",
-    "description": "Welcome to my final project examining social media usage and beliefs of US adults. Using data collected from the Pew Research Center",
+    "path": "posts/2019-03-16-adult-attidutes-towards-the-internet/",
+    "title": "Adult Attidutes Towards the Internet",
+    "description": "Overall, would you consider the internet to be a good thing or a bad thing for society?",
     "author": [
       {
         "name": "Cianna Bedford-Petersen",
@@ -12,6 +12,21 @@
     "date": "2019-03-16",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-03-16T11:03:00-07:00"
+    "last_modified": "2019-03-16T14:07:19-07:00"
+  },
+  {
+    "path": "posts/welcome/",
+    "title": "Project Overview: Social Media Habits and Attitudes of US Adults",
+    "description": "Welcome to my final project examining social media usage and beliefs of US adults.",
+    "author": [
+      {
+        "name": "Cianna Bedford-Petersen",
+        "url": {}
+      }
+    ],
+    "date": "2019-03-16",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-03-16T14:06:57-07:00"
   }
 ]

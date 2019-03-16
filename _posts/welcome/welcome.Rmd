@@ -1,7 +1,7 @@
 ---
-title: "Social Media Habits and Attitudes of US Adults"
+title: "Project Overview: Social Media Habits and Attitudes of US Adults"
 description: |
-  Welcome to my final project examining social media usage and beliefs of US adults. Using data collected from the Pew Research Center.
+  Welcome to my final project examining social media usage and beliefs of US adults.
 author:
   - name: Cianna Bedford-Petersen 
     affiliation: University of Oregon
@@ -10,6 +10,8 @@ output:
   distill::distill_article:
     self_contained: false
 ---
+
+This publicly available data set includes responses from 2000 adults who participated in a phone survey conducted by the Pew Research Center in January 2018. The survey inquired about about adult attitudes toward the internet and social media usage. All visualizations are intended for a general audience. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
