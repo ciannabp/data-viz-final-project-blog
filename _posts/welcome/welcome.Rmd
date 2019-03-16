@@ -1,0 +1,23 @@
+---
+title: "Social Media Habits and Attitudes of US Adults"
+description: |
+  Welcome to my final project examining social media usage and beliefs of US adults. Using data collected from the Pew Research Center.
+author:
+  - name: Cianna Bedford-Petersen 
+    affiliation: University of Oregon
+date: 03-16-2019
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating blogs with Distill at:
+# https://rstudio.github.io/distill/blog.html
+
+```
+
+
+

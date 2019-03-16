@@ -1,0 +1,5 @@
+---
+title: "Social Media Habits and Attitudes of US Adults"
+site: distill::distill_website
+listing: posts
+---
