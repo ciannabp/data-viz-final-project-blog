@@ -22,9 +22,9 @@ library(ggridges)
 
 ```
 
-Participants were asked if overall, they consider the internet to be a good or bad thing for society. I am curious if the distribution of ages varies by response. I would predict that older participants are more likely to say that the internet is a bad thing for society than younger participants.
+Participants were asked if overall, they consider the internet to be a good or bad thing for society. I am curious if the distribution of ages varies by response. I would predict that older participants are more likely to say that the internet is a bad thing for society rather than than a good thing.
 
-For the first iteration of this plot, I used ggridges to to get a sense of the age distribution for each of the possible responses.  
+For the first iteration of this plot, I used ggridges to visualize the age distribution for each of the possible responses.  
 
 ```{r plot 1 fist iteration}
 
@@ -51,7 +51,7 @@ ggplot(pew, aes(age, response_category)) +
 
 ```
 
-From this first plot it looks like there may be some differences in response by age but it is difficult to see what the pattern might be. I was curious to know how many respondants were in each category. In the table below you can see that only 10 participants refused to answer, this is likely not enuough to represent the population well and will be removed from future plots.
+From this first plot, it looks like there may be some differences in response by age but it is difficult to see what the pattern might be. I was curious to know how many respondants were in each category. In the table below you can see that only 10 participants refused to answer. This is likely not enough to represent the population well, so I will remove it from future plots.
 
 ```{r plot 1 count table}
 
@@ -66,7 +66,7 @@ pew2 <- pew %>%
   filter(response_category!="Refused to Answer")
 ```
 
-For the second interation of the plot, I put the reponse categories in an order that was more interpretable to aide in spotting any patterns in the data. Additonally, I chose a larger bandwith to show a clearer peak for each distribution. Finally, I cleaned up titles and axes to help orient the reader.
+For the second interation of this plot, I put the reponse categories in an order that was more interpretable to better visualize patterns in the data. Additonally, I chose a larger bandwith to show a clearer peak for each distribution. Finally, I cleaned up titles and axes to help orient the reader.
 
 ```{r plot 1 second interation}
 
@@ -91,9 +91,9 @@ gr
 
 ```
 
-At this point, our plot would be pretty interpretable to any scientific audience that was familiar with denisity distributions. However, to make this plot more approachable for a general audience, it would be helpful to have a reference point that makes it easy to compare response groups. For the final interation of the plot, I added a line and text at the highest density point for each response category. 
+At this point, our plot would be pretty interpretable to any scientific audience that was familiar with denisity distributions. However, to make this plot more approachable for a general audience, it would be helpful to have a reference point for comparing response groups. For the final interation of the plot, I added a line and text at the highest density point for each response category. 
 
-``` {r third iteration}
+``` {r plot 1 third iteration}
 
 # Add a line at the highest density point for each response category
 
@@ -128,4 +128,4 @@ ggplot(pew2, aes(age, response_category)) +
 
 ```
 
-From the final plot we can see that older participants were slightly more likely to say that the internet has had at least some bad influence rather than being completely a good thing, although, the effect of age is not as dramatic as I originally expected. However, there is a large skew towards older participants for the response that they don't know if the internet has been mostly good or bad. This may indicate that younger people have more definitive beliefs about the impact of the internet. 
+From the final plot we can see that older participants were only slightly more likely to say that the internet has had at least some bad influence rather than being completely a good thing. However, there is a large skew towards older participants responding that they don't know if the internet has been mostly good or bad. This may indicate that younger people have more definitive beliefs about the impact of the internet. 

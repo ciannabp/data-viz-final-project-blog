@@ -1,7 +1,7 @@
 ---
 title: "Chosen Social Media for Single-Platform Users"
 description: |
-  For pepole that only engage with one social media platform, which platform do they choose?
+  For people that only engage with one social media platform, which platform do they choose?
 author:
   - name: Cianna Bedford-Petersen
     url: {}
@@ -11,7 +11,7 @@ output:
     self_contained: false
 ---
 
-After exploring data regarding how many social media platforms participants engaged with, I am particularly curious about the group of participants that only engage with one social media platform. Which platform do they choose to engage with? I would hypothesize that those who only choose one platform would be most likely to engage with YouTube, since it is the most passive of the social media platforms, involving very little user interaction. 
+After exploring data regarding how many social media platforms participants engaged with, I am particularly curious about the group of participants that only engage with one social media platform. Which platform do they choose to engage with? I would hypothesize that those who only choose one platform would be most likely to engage with YouTube, since it is the most passive of the social media platforms and requires very little user interaction. 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -90,7 +90,7 @@ ggplot(one_plat2, aes(platform, fill = platform)) +
   scale_fill_viridis_d() 
 ```
 
-This shows a pretty clear message that YouTube and Facebook are dominant for single-platform users. However, since we just made a chart similar to this for different information, maybe this is a good candidate for a waffle plot. A waffle plot might also help us better visualize the difference between lesser chosen platforms like Snapchat and Twitter. When making the plot, I will arrange the categories in descending order so that the smaller categories are closer to the legend, makeing them easier to interpret. 
+This shows a pretty clear message that YouTube and Facebook are dominant for single-platform users. However, since we just made a bar chart to display number of platforms engaged with we could distinguish this visualization by making a waffle plot. A waffle plot might also help us better visualize the difference between lesser chosen platforms like Snapchat and Twitter. To make this plot easy to interpret, I will arrange the categories in descending order so that the smaller categories are closer to the legend.
 
 
 ```{r plot 3 second iteration}
@@ -109,7 +109,7 @@ waffle(waffle,
 
 ```
 
-This plot looks really clean and gives us a good idea of which platforms are the most popular with single-platform users. However, using the actual number of participants gives us a lot of squares to look at. It may be more visually appealing and interpretable to make a visualization of proportions with a 10 x 10 plot. 
+This plot gives us a good idea of which platforms are the most popular with single-platform users. However, using the raw number of participants displays a lot of squares. It may be more visually appealing and interpretable to make a plot of proportions with a 10 x 10 grid. 
 
 ```{r plot 3 thrid iteration}
 

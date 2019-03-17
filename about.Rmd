@@ -1,5 +1,5 @@
 ---
-title: "Project Overview: Social Media Habits and Attitudes of US Adult"
+title: "Project Overview: Social Media Habits and Attitudes of US Adults"
 description: |
    Final project examining social media usage and beliefs of US adults.
 ---
