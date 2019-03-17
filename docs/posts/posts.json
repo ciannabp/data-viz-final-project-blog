@@ -1,6 +1,36 @@
 [
   {
-    "path": "posts/2019-03-15-single-platform-users/",
+    "path": "posts/2019-03-17-adult-attitudes-towards-the-internet/",
+    "title": "Adult Attidutes Towards the Internet",
+    "description": "Overall, would you consider the internet to be a good thing or a bad thing for society?",
+    "author": [
+      {
+        "name": "Cianna Bedford-Petersen",
+        "url": {}
+      }
+    ],
+    "date": "2019-03-17",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-03-17T12:33:03-07:00"
+  },
+  {
+    "path": "posts/2019-03-17-internet-frequency-and-social-media/",
+    "title": "Frequency of Internet Use and Social Media Engagement ",
+    "description": "Does the frequency of overall internet usage affect how many social media platforms participants engage with?",
+    "author": [
+      {
+        "name": "Cianna Bedford-Petersen",
+        "url": {}
+      }
+    ],
+    "date": "2019-03-17",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-03-17T12:31:24-07:00"
+  },
+  {
+    "path": "posts/2019-03-17-single-platform-users/",
     "title": "Chosen Social Media for Single-Platform Users",
     "description": "For pepole that only engage with one social media platform, which platform do they choose?",
     "author": [
@@ -12,36 +42,6 @@
     "date": "2019-03-17",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-03-17T11:51:52-07:00"
-  },
-  {
-    "path": "posts/2019-03-16-internet-frequency-and-socia-media/",
-    "title": "Frequency of Internet Use and Social Media Engagement ",
-    "description": "Does the frequency of overall internet usage affect how many social media platforms participants engage with?",
-    "author": [
-      {
-        "name": "Cianna Bedford-Petersen",
-        "url": {}
-      }
-    ],
-    "date": "2019-03-16",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2019-03-17T10:15:01-07:00"
-  },
-  {
-    "path": "posts/2019-03-17-adult-attidutes-towards-the-internet/",
-    "title": "Adult Attidutes Towards the Internet",
-    "description": "Overall, would you consider the internet to be a good thing or a bad thing for society?",
-    "author": [
-      {
-        "name": "Cianna Bedford-Petersen",
-        "url": {}
-      }
-    ],
-    "date": "2019-03-16",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2019-03-16T14:07:19-07:00"
+    "last_modified": "2019-03-17T12:29:37-07:00"
   }
 ]
