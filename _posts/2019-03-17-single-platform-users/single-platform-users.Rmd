@@ -1,0 +1,128 @@
+---
+title: "Chose Social Media for Single-Platform Users"
+description: |
+  For pepole that only engage with one social media platform, which platform do they choose?
+author:
+  - name: Cianna Bedford-Petersen
+    url: {}
+date: 03-17-2019
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+After exploring data regarding how many social media platforms participants engaged with, I am particularly curious about the group of participants that only engage with one social media platform. Which platform do they choose to engage with? I would hypothesize that those who only choose one platform would be most likely to engage with YouTube, since it is the most passive of the social media platforms, involving very little user interaction. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(here)
+here("_posts")
+library(rio)
+library(tidyverse)
+library(waffle)
+
+```
+
+
+```{r plot 3 first iteration}
+
+# For pepole that only engage with one social media platform, which platform do they choose?
+
+pew <- import(here("_posts", "core_trends_survey.csv"))
+
+# Tidy data
+pew_tidy <- pew %>% 
+  rename("Twitter" = "web1a", "Instagram" = "web1b", 
+         "Facebook" = "web1c", "Snapchat" = "web1d", 
+         "YouTube" = "web1e","WhatsApp" = "web1f", 
+         "Pinterest" = "web1g", "LinkedIn" = "web1h") %>% 
+  gather(platform, response, 
+         Twitter , Instagram, Facebook, Snapchat, YouTube, WhatsApp, Pinterest, LinkedIn) %>% 
+  select(respid, intfreq, platform, response) 
+
+# Recode variable to have category names
+pew_tidy$intfreq <-as.factor(recode(pew_tidy$intfreq, 
+                                    "1" = "Almost Constantly", "2" = "Several Times A Day", 
+                                    "3" = "About Once A Day", "4" = "Several Times A Week", 
+                                    "5" = "Less Than Several Times A Week", "8" = "Don't Know",
+                                    "9" = "Refused to Answer"))
+
+# Put internet frequency in an interpretable order
+pew_tidy$intfreq <- factor(pew_tidy$intfreq, 
+                           levels=c("Almost Constantly", "Several Times A Day", 
+                                    "Several Times A Week", "Less Than Several Times A Week", 
+                                    "About Once A Day"))
+
+# Filter to include just yes responses for each platform and exclude don't know and NA responses for internet use frequency 
+pew_yes <- pew_tidy %>% 
+  filter(response==1, 
+         intfreq!="Don't Know", 
+         intfreq!="Refused to Answer")
+
+# Get count of platforms engaged with by participant id
+ind_count <- pew_yes %>% 
+  group_by(respid, intfreq) %>% 
+  summarize(total_platform=n())
+
+# Filter for people that only engage with one social media platform
+one_plat <- ind_count %>% 
+  filter(total_platform==1)
+
+# Join data with name of platform to participant id for single platform users. For single platform users this tells us which platform they
+one_plat2 <- left_join(one_plat, pew_yes)
+
+# Bar plot of preferred platform for single platform users
+ggplot(one_plat2, aes(platform, fill = platform)) +
+  geom_bar() +
+  coord_flip() +
+  theme_minimal() +
+  theme(legend.title = element_blank(), 
+        legend.position="none", 
+        axis.text.y = element_text(size = 15),
+        axis.text.x = element_text(size = 12), 
+        plot.title = element_text(size = 30), 
+        axis.title.x = element_blank(), 
+        axis.title.y =element_text(size = 15))+
+  scale_fill_viridis_d() 
+```
+
+This shows a pretty clear message that YouTube and Facebook are dominant for single-platform users. However, since we just made a chart similar to this for different information, maybe this is a good candidate for a waffle plot. A waffle plot might also help us better visualize the difference between lesser chosen platforms like Snapchat and Twitter. When making the waffle plot, I will arrange the categories in descending order so that the smaller categories are closer to the legend, makeing them easier to interpret. 
+
+
+```{r plot 3 second iteration}
+
+# Make summary data by platform for waffle plot. Put in descending order so lesser used platforms are closer to the legend. Play around with row number. 
+
+waffle <- one_plat2 %>%
+  ungroup() %>% 
+  group_by(platform) %>% 
+  dplyr::summarize(n=n()) %>% 
+  arrange(desc(n))
+
+waffle(waffle, 
+       rows = 11, 
+       title="Chosen Social Media for Single-Platform Users")
+
+```
+
+This plot looks really clean and gives us a good idea of which platforms are the most popular with single-platform users. However, using the actual number of participants gives us a lot of squares to look at. It may be more visually appealing and interpretable to make a visualization of proportions. 
+
+```{r plot 3 thrid iteration}
+
+#make proportion out of 100 so it is more interpretible 
+waffle_p <- one_plat2 %>%
+  ungroup() %>% 
+  group_by(platform) %>% 
+  dplyr::summarize(n=n()/nrow(.)*100) %>% 
+  arrange(desc(n)) %>% 
+  mutate_if(is.numeric, round, 0)
+  
+#plot and add title 
+waffle(waffle_p, 
+       rows = 10, 
+       title="Chosen Social Media for Single-Platform Users")
+
+```
+
+Now our plot is looking really clean! It is easy to see that YouTube and Facebook are the overwhelming favorites of single-platform users. We can also make some more nuanced interpretations from this plot. For example, of the lesser chosen platforms Pinterest was used by twice as many participants as WhatsApp and four times as many participants as LinkedIn, Snapchat, or Twitter. 

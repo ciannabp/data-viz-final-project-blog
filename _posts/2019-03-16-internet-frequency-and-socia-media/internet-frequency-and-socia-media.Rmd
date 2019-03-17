@@ -91,7 +91,7 @@ ggplot(prop, aes(total_platform, proportion)) +
 
 While this first plot conveys all of the necessary information, it is difficult to compare across frequency categories. To resolve this, I put all of the facets in one row and added a fill by number of platforms engaged with, so the viewer is able to compare across all levels of internet frequency use. This will also resolve the issue of overlapping facet label and x-axis seen in the first plot.  
 
-```{r plot 2 second iteration, fig.height=25, fig.width=35}
+```{r plot 2 second iteration, fig.height=25, fig.width=40}
 
 # Add titles and put all facets in one row
 ggplot(prop, aes(total_platform, proportion, fill = total_platform)) + 
@@ -105,19 +105,19 @@ ggplot(prop, aes(total_platform, proportion, fill = total_platform)) +
   theme_minimal() +
   theme(legend.title = element_blank(), 
         legend.position="none", 
-        axis.text.y = element_text(size = 40),
-        axis.text.x = element_text(size = 30), 
-        plot.title = element_text(size = 50),
-        axis.title.x = element_text(size = 40), 
-        axis.title.y = element_text(size = 40),
-        strip.text.x = element_text(size = 30))
+        axis.text.y = element_text(size = 65),
+        axis.text.x = element_text(size = 35), 
+        plot.title = element_text(size = 90),
+        axis.title.x = element_text(size = 65), 
+        axis.title.y = element_text(size = 65),
+        strip.text.x = element_text(size = 40))
 
 ```
 
 Put all of the facets on one row made the comparison across frequency groups much clearer. However filling by the number of platforms engaged with is actually a bit distracting and confusing. The percentage of users is a proportion that adds up to 100% within a facet rather than across the facets. Therefore, it actually makes more sense to fill for the frequency of internet usage. This will direct the viewers attention to seeing a distribution within a facet and they can more easily compare the distributions across levels of internet usage frequency. Finally, I will us a color palette that is more colorblind friendly than the default. 
 
 
-```{r plot third iteration, fig.height=15, fig.width=30}
+```{r plot third iteration, fig.height=25, fig.width=40}
 
 # Add fill by facet to focus the viewers attention to each compare values within a facet
 ggplot(prop, aes(total_platform, proportion, fill = intfreq)) + 
@@ -131,12 +131,12 @@ ggplot(prop, aes(total_platform, proportion, fill = intfreq)) +
   theme_minimal() +
   theme(legend.title = element_blank(), 
         legend.position ="none", 
-        axis.text.y = element_text(size = 15), 
-        axis.text.x = element_text(size = 12), 
-        plot.title = element_text(size = 30), 
-        axis.title.x = element_text(size = 15), 
-        axis.title.y = element_text(size = 15), 
-        strip.text.x = element_text(size = 15)) +
+        axis.text.y = element_text(size = 65), 
+        axis.text.x = element_text(size = 35), 
+        plot.title = element_text(size = 90), 
+        axis.title.x = element_text(size = 65), 
+        axis.title.y = element_text(size = 65), 
+        strip.text.x = element_text(size = 40)) +
   scale_fill_viridis_d()
 
 ```

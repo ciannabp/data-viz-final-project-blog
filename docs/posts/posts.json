@@ -1,5 +1,20 @@
 [
   {
+    "path": "posts/2019-03-17-single-platform-users/",
+    "title": "Chose Social Media for Single-Platform Users",
+    "description": "For pepole that only engage with one social media platform, which platform do they choose?",
+    "author": [
+      {
+        "name": "Cianna Bedford-Petersen",
+        "url": {}
+      }
+    ],
+    "date": "2019-03-17",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-03-17T11:15:30-07:00"
+  },
+  {
     "path": "posts/2019-03-16-adult-attidutes-towards-the-internet/",
     "title": "Adult Attidutes Towards the Internet",
     "description": "Overall, would you consider the internet to be a good thing or a bad thing for society?",
@@ -27,6 +42,6 @@
     "date": "2019-03-16",
     "categories": [],
     "preview": {},
-    "last_modified": "2019-03-16T17:39:10-07:00"
+    "last_modified": "2019-03-17T10:15:01-07:00"
   }
 ]
