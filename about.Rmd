@@ -8,4 +8,4 @@ description: |
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-This publicly available data set includes responses from 2000 adults who participated in a phone survey conducted by the Pew Research Center in January 2018. The survey inquired about about adult attitudes toward the internet and social media usage. All visualizations are intended for a general audience.
+This publicly available data set includes responses from 2000 adults who participated in a phone survey conducted by the Pew Research Center in January 2018. The survey inquired about adult attitudes toward the internet and social media usage. All visualizations are intended for a general audience.
