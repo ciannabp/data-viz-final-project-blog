@@ -1,6 +1,6 @@
 [
   {
-    "path": "posts/2019-03-17-single-platform-users/",
+    "path": "posts/2019-03-15-single-platform-users/",
     "title": "Chosen Social Media for Single-Platform Users",
     "description": "For pepole that only engage with one social media platform, which platform do they choose?",
     "author": [
@@ -13,21 +13,6 @@
     "categories": [],
     "preview": {},
     "last_modified": "2019-03-17T11:51:52-07:00"
-  },
-  {
-    "path": "posts/2019-03-16-adult-attidutes-towards-the-internet/",
-    "title": "Adult Attidutes Towards the Internet",
-    "description": "Overall, would you consider the internet to be a good thing or a bad thing for society?",
-    "author": [
-      {
-        "name": "Cianna Bedford-Petersen",
-        "url": {}
-      }
-    ],
-    "date": "2019-03-16",
-    "categories": [],
-    "preview": {},
-    "last_modified": "2019-03-16T14:07:19-07:00"
   },
   {
     "path": "posts/2019-03-16-internet-frequency-and-socia-media/",
@@ -43,5 +28,20 @@
     "categories": [],
     "preview": {},
     "last_modified": "2019-03-17T10:15:01-07:00"
+  },
+  {
+    "path": "posts/2019-03-17-adult-attidutes-towards-the-internet/",
+    "title": "Adult Attidutes Towards the Internet",
+    "description": "Overall, would you consider the internet to be a good thing or a bad thing for society?",
+    "author": [
+      {
+        "name": "Cianna Bedford-Petersen",
+        "url": {}
+      }
+    ],
+    "date": "2019-03-16",
+    "categories": [],
+    "preview": {},
+    "last_modified": "2019-03-16T14:07:19-07:00"
   }
 ]
