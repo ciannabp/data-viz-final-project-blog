@@ -84,7 +84,8 @@ gr <- ggplot(pew2, aes(age, response_category)) +
   labs(title = "Adult Attitudes Towards the Internet", 
        subtitle = "Would you say the internet has mostly been a...",
        x = "Age") +
-  scale_x_continuous(breaks = c(0,20,40,60,80,100), labels = c(0,20,40,60,80,100))+
+  scale_x_continuous(breaks = c(0,20,40,60,80,100), 
+                     labels = c(0,20,40,60,80,100))+
   theme_minimal()+
   theme(axis.title.y = element_blank())
 gr
@@ -122,7 +123,8 @@ ggplot(pew2, aes(age, response_category)) +
   labs(title = "Adult Attitudes Towards the Internet", 
        subtitle = "Would you say the internet has mostly been a...",
        x = "Age") +
-  scale_x_continuous(breaks = c(0,20,40,60,80,100,100), labels = c(0,20,40,60,80,100,100))+
+  scale_x_continuous(breaks = c(0,20,40,60,80,100,100), 
+                     labels = c(0,20,40,60,80,100,100))+
   theme_minimal()+
   theme(axis.title.y = element_blank())
 
