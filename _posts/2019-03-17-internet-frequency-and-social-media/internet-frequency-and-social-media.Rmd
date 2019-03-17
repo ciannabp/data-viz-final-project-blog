@@ -15,7 +15,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 
 library(here)
-here("_posts")
+here("data")
 library(rio)
 library(tidyverse)
 library(colorblindr)
@@ -32,7 +32,7 @@ This data set required a fair amount of wrangling before visualization. Particip
 
 # Does the frequency of overall internet usage affect how many social media platforms participants engage with
 
-pew <- import(here("_posts", "core_trends_survey.csv"))
+pew <- import(here("data", "core_trends_survey.csv"))
 
 # Tidy data
 pew_tidy <- pew %>% 

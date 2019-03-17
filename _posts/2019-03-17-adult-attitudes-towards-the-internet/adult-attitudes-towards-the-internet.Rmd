@@ -15,7 +15,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 
 library(here)
-here("_posts")
+here("data")
 library(rio)
 library(tidyverse)
 library(ggridges)
@@ -29,7 +29,7 @@ For the first iteration of this plot, I used ggridges to visualize the age distr
 ```{r plot 1 fist iteration}
 
 # Import data
-pew <- import(here("_posts", "core_trends_survey.csv"))
+pew <- import(here("data", "core_trends_survey.csv"))
 
 
 # Change response variable to a factor and give categorical response names

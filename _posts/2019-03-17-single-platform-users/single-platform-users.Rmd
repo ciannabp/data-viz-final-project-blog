@@ -17,7 +17,7 @@ After exploring data regarding how many social media platforms participants enga
 knitr::opts_chunk$set(echo = FALSE)
 
 library(here)
-here("_posts")
+here("data")
 library(rio)
 library(tidyverse)
 library(waffle)
@@ -29,7 +29,7 @@ library(waffle)
 
 # For pepole that only engage with one social media platform, which platform do they choose?
 
-pew <- import(here("_posts", "core_trends_survey.csv"))
+pew <- import(here("data", "core_trends_survey.csv"))
 
 # Tidy data
 pew_tidy <- pew %>% 
