@@ -18,7 +18,6 @@ library(here)
 here("_posts")
 library(rio)
 library(tidyverse)
-library(colorblindr)
 library(ggridges)
 
 ```
